@@ -1,0 +1,11 @@
+{ "backgroundColor":  "#FFA1A1FF",
+  "mainColor":  "#648267FF",
+  "toolTip":  "#84817a",
+  "buttonClicked":  "#EAEAEA",
+  "buttonNotClicked": "#10316B",
+  "backSession":  "#0087995B",
+  "fontCompGenerale" : "#F0FFFDFF",
+  "boxShadow" : "#F0FFFDFF",
+  "fontTheme" : "\"Roboto\",sans-serif"
+
+}

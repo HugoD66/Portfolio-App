@@ -1,0 +1,10 @@
+{ "backgroundColor":  "#3C4048",
+  "mainColor":  "#B2B2B2", "toolTip":  "#EAEAEA",
+  "buttonClicked":  "#00ABB3",
+  "buttonNotClicked": "#191F2EFF",
+  "backSession":  "#3570755B",
+  "fontCompGenerale" : "#F0FFFDFF",
+  "boxShadow" : "#0F26275B",
+  "fontTheme" : "\"Arial\",sans-serif"
+
+}
