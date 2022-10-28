@@ -48,3 +48,13 @@ table {
   border-spacing: 0;
 }
 
+
+.modal-body {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: Consolas, sans-serif;
+  color: black;
+}
+.progressLabel {
+  line-height: 10px;
+}

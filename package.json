@@ -13,6 +13,7 @@
     "react-animated-progress-bar": "^1.1.1",
     "react-bootstrap": "^2.5.0",
     "react-circular-progressbar": "^2.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.2",

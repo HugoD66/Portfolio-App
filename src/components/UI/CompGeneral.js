@@ -47,9 +47,7 @@ const Description= styled.p`
 `;
 const SavoirEtre= styled.div`
   text-align: center;
-  p {
-    color: white;
-  }
+
   h4 {
     color: ${(props) => props.theme.fontCompGenerale};
     font-family: Consolas,SansSerif,serif;
@@ -72,7 +70,6 @@ const Languages= styled.div`
       color: ${(props) => props.theme.fontCompGenerale};
       font-family: Consolas,SansSerif,serif;
     }
-
   }
   
 `;

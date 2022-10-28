@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import {Tooltip} from "react-bootstrap";
 
 const ProgressLine = ({
                           label,
+                          picture,
                           backgroundColor = "#3C4048",
                           // expected format for visual parts
                           visualParts = [
@@ -36,47 +39,75 @@ const ProgressLine = ({
 
     return (
         <ProgressLineStyle>
-            <div className="progressLabel">{label}</div>
+            <OverlayTrigger
+                placement="bottom"
+                overlay={<Tooltip id="button-tooltip-2">{label}</Tooltip>}
+                >
+                <Image src={picture} alt="Logo langage"/>
+            </OverlayTrigger>
+
             <div
                 className="progressVisualFull"
                 // to change the background color dynamically
 
             >
+
                 {visualParts.map((item, index) => {
                     // map each part into separate div and each will be animated
                     // because of the "transition: width 2s;" css in class "progressVisualPart"
                     // and because of the new width ("widths[index]", previous one was 0)
+
                     return (
-                        <div
-                            // There won't be additional changes in the array so the index can be used
-                            /* eslint-disable-next-line react/no-array-index-key */
-                            key={index}
-                            style={{
-                                width: widths[index],
-                                // setting the actual color of bar part
-                            }}
-                            className="progressVisualPart"
-                        />
+
+                            <div
+                                // There won't be additional changes in the array so the index can be used
+                                /* eslint-disable-next-line react/no-array-index-key */
+                                key={index}
+                                style={{
+                                    width: widths[index],
+                                    // setting the actual color of bar part
+                                }}
+                                className="progressVisualPart"
+                            />
+
+
                     );
+
                 })}
+
             </div>
+
         </ProgressLineStyle>
     );
 };
+const Image= styled.img`
+  width: 35px;
+  height: 35px;
+  float:left;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 3%;
+`;
 const ProgressLineStyle= styled.div`
+  margin: 5%;
+  margin-top: 6%;
   .progressVisualFull {
     display: flex;
     background-color: ${(props) => props.theme.buttonNotClicked};
-
     /* Largeur ProgressBar */
-    height: 20px;
+    height: 15px;
     margin: 20px 0;
+    width: 80%;
+    margin-top: 8%;
+    border-radius: 8px;
   }
 
   .progressVisualPart {
     /* Number of the seconds for complete animation */
     transition: width 3s;
     background-color: ${(props) => props.theme.buttonClicked};
+    border-radius: 8px;
+
   }
 
   .progressLabel {
@@ -86,6 +117,7 @@ const ProgressLineStyle= styled.div`
   }
 
   body {
+    
     margin: 20px;
     padding: 20px;
     border: 1px solid #e5e5e5;
