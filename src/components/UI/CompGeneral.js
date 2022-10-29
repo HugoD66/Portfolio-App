@@ -6,12 +6,13 @@ function CompGeneral(props) {
     return (
         <div>
             <Description>
-                <p>Durant mon cursus, j'ai été amené à utiliser
-                    différents languages, autant back que front.
-                    J'ai également dût ?????  manipuler de nombreux
-                    frameworks. Spécialisé en développement
-                    d'application Symfony, et en Programmation
-                    Orientée Objet. </p>
+                    Durant mon cursus, j'ai été amené à utiliser
+                        différents languages, autant back que front.
+                        J'ai également dût ?????  manipuler de nombreux
+                        frameworks. Spécialisé en développement
+                        d'application Symfony, et en Programmation
+                        Orientée Objet.
+
             </Description>
             <Languages className="compAngFr">
                 <Rounded className="dashboard">
@@ -43,7 +44,6 @@ const Description= styled.p`
   width: 90%;
   margin: 5% auto;
   color: ${(props) => props.theme.fontCompGenerale};
-
 `;
 const SavoirEtre= styled.div`
   text-align: center;
@@ -60,6 +60,7 @@ const Languages= styled.div`
   width: 90%;
   margin: 6% auto;
   background-color: ${(props) => props.theme.backSession};
+  border-radius: 20px;
   .dashboard {
     display: flex;
     flex-direction: column;

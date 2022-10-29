@@ -1,11 +1,12 @@
-{ "backgroundColor":  "#FFA1A1FF",
-  "mainColor":  "#648267FF",
+{ "backgroundColor":  "#F0EBE4FF",
+  "mainColor":  "#462D0CFF",
   "toolTip":  "#84817a",
-  "buttonClicked":  "#EAEAEA",
-  "buttonNotClicked": "#10316B",
-  "backSession":  "#0087995B",
-  "fontCompGenerale" : "#F0FFFDFF",
+  "buttonClicked":  "#BE9275FF",
+  "buttonNotClicked": "#C8DBBE",
+  "backSession":  "#E5DFD5FF",
+  "fontCompGenerale" : "#0E0703FF",
   "boxShadow" : "#F0FFFDFF",
-  "fontTheme" : "\"Roboto\",sans-serif"
-
+  "fontTheme" : "\"Roboto\",sans-serif",
+  "titleFont" : "\"Inconsolata\", monospace",
+  "pictureAccueil" : "./public/accueil/accueil-light.png"
 }

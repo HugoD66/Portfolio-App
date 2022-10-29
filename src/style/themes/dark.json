@@ -1,10 +1,12 @@
 { "backgroundColor":  "#3C4048",
-  "mainColor":  "#B2B2B2", "toolTip":  "#EAEAEA",
+  "mainColor":  "#B2B2B2",
+  "toolTip":  "#EAEAEA",
   "buttonClicked":  "#00ABB3",
   "buttonNotClicked": "#191F2EFF",
   "backSession":  "#3570755B",
   "fontCompGenerale" : "#F0FFFDFF",
   "boxShadow" : "#0F26275B",
-  "fontTheme" : "\"Arial\",sans-serif"
-
+  "fontTheme" : "\"Arial\",sans-serif",
+  "titleFont" : "\"Inconsolata\", monospace",
+  "pictureAccueil" : "public/accueil/accueil-dark.png"
 }

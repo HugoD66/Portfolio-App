@@ -1,59 +1,58 @@
-import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import styled from "styled-components";
+
+import { Carousel } from 'react-carousel3';
+import Hypnos from "picture/carousel/hypnos.png";
+import Ecoit from "picture/carousel/ecoit.png";
+import Dantabase from "picture/carousel/dantabase.png";
 
 
-import dantabase from 'picture/dantabase.png';
-import ecoit from 'picture/ecoit.png';
-import hypnos from 'picture/hypnos.png';
+const style = {
+    width: 297,
+    height: 296,
+};
 
-export default function ControlledCarousel() {
-    const [index, setIndex] = useState(0);
+export default () => (
+    <div
+        style={{
+            //Disposition du BLOC PRINCIPAL
+            //Creer image application , avec titre au dessus(sans background), qui pivotera avec la photo
+            display: 'flex',
+            justifyContent: 'center',
+            boxShadow: "5px 5px 15px 5px #000000"
+        }}
+    >
+        <CarouselTemplate>
+        <Carousel height={460} width={700} yOrigin={60} yRadius={25} autoPlay={false}  >
+            <div key={1} style={style}>
+                <img alt="" src={Hypnos} style={{
+                    boxShadow: "-1px 0px 23px -4px #000000"
+                }}/>
+            </div>
+            <div key={2} style={style}>
+                <img alt="" src={Ecoit}  style={{
+                    boxShadow: "-1px 0px 23px -4px #000000"
+                }}/>
+            </div>
+            <div key={3} style={style}>
+                <img alt="" src={Dantabase}  style={{
+                    boxShadow: "-1px 0px 23px -4px #000000"
+                }}/>
+            </div>
+            <div key={4} style={style}>
+                <img alt="" src={Hypnos}  style={{
+                    boxShadow: "-1px 0px 23px -4px #000000"
+                }}/>
+            </div>
+            <div key={5} style={style}>
+                <img alt="" src={Hypnos}  style={{
+                    boxShadow: "-1px 0px 23px -4px #000000"
+                }}/>
+            </div>
 
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-
-    return (
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={dantabase}
-                    alt="First slide"
-                />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={hypnos}
-                    alt="Second slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
-                    src={ecoit}
-                    alt="Third slide"
-                />
-
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
         </Carousel>
-    );
-}
-
+        </CarouselTemplate>
+    </div>
+);
+const CarouselTemplate= styled.div`
+`;

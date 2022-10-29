@@ -5,7 +5,10 @@ import Facebook from "picture/footer/facebook.svg";
 import Github from "picture/footer/github.svg";
 import Discord from "picture/footer/discord.svg";
 import Linkedin from "picture/footer/linkedin.svg";
-
+import Fb from "picture/modal/fb-color.png";
+import Git from "picture/modal/git-color.png";
+import Disc from "picture/modal/disc-color.png";
+import Link from "picture/modal/link-color.png";
 
 export default function Footer ({ isColored, handleToogleTheme}){
     const [showFacebook, setShowFacebook] = useState(false);
@@ -32,7 +35,6 @@ export default function Footer ({ isColored, handleToogleTheme}){
     return (
         <Wrapper>
             <GaleriePhoto className="galerie-photo">
-
                 <Im className="e-icon" src={Facebook} onClick={handleShowFacebook} />
                 <Im className="e-icon" src={Github} onClick={handleShowGithub}  />
                 <Im className="e-icon" src={Discord} onClick={handleShowDiscord}  />
@@ -40,22 +42,23 @@ export default function Footer ({ isColored, handleToogleTheme}){
             </GaleriePhoto>
 
             <Button  className="button-theme" variant="outlined" onClick={handleToogleTheme}> Thème { isColored ? "Sombre" : "Clair"}</Button>
-
-            {/*Modal FB*/}
+            {/*modal FB*/}
             <Modal className="modal" show={showFacebook} onHide={handleCloseFacebook}>
+                <img width="30px" height="30px" src={Fb} alt="Photo couleur Facebook"/>
                 <Modal.Body className="modal-body"><a href="https://www.facebook.com/hugo.dessauw">https://www.facebook.com/hugo.dessauw</a></Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.facebook.com/hugo.dessauw")}>
-                        <p onClick={handleSubmit}> Copier
-                        </p>
-                    </Button>
-                    <Button variant="primary" onClick={handleCloseFacebook}>
-                    <p>Fermer</p>
-                    </Button>
+                        <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.facebook.com/hugo.dessauw")}>
+                            <p onClick={handleSubmit}> Copier
+                            </p>
+                        </Button>
+                        <Button variant="primary" onClick={handleCloseFacebook}>
+                        <p>Fermer</p>
+                        </Button>
                 </Modal.Footer>
             </Modal>
-            {/*Modal Git*/}
+            {/*modal Git*/}
             <Modal className="modal" show={showGithub} onHide={handleCloseGithub}>
+                <img width="30px" height="30px" src={Git} alt="Photo couleur Facebook"/>
                 <Modal.Body className="modal-body"><a href="https://github.com/HugoD66?tab=repositories">https://github.com/HugoD66?tab=repositories</a></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://github.com/HugoD66?tab=repositories")}>
@@ -67,8 +70,9 @@ export default function Footer ({ isColored, handleToogleTheme}){
                     </Button>
                 </Modal.Footer>
             </Modal>
-            {/*Modal Discord*/}
+            {/*modal Discord*/}
             <Modal className="modal" show={showDiscord} onHide={handleCloseDiscord}>
+                <img width="30px" height="30px" src={Disc} alt="Photo couleur Facebook"/>
                 <Modal.Body className="modal-body"><a href="https://discord.com/channels/@me">Enök#2857</a></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => navigator.clipboard.writeText("Enök#2857")}>
@@ -80,8 +84,9 @@ export default function Footer ({ isColored, handleToogleTheme}){
                     </Button>
                 </Modal.Footer>
             </Modal>
-            {/*Modal Linkedin*/}
+            {/*modal Linkedin*/}
             <Modal className="modal" show={showLinkedin} onHide={handleCloseLinkedin}>
+                <img width="30" height="30" src={Link} alt="Photo couleur Facebook"/>
                 <Modal.Body className="modal-body"><a href="https://www.linkedin.com/in/hugo-dessauw-07a901250/">https://www.linkedin.com/in/hugo-dessauw-07a901250/</a></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.linkedin.com/in/hugo-dessauw-07a901250/")}>
@@ -96,19 +101,23 @@ export default function Footer ({ isColored, handleToogleTheme}){
         </Wrapper>
     )
 }
-
+const ModalFooterCustom= styled.img`
+  display: flex;
+  
+`;
 const Wrapper = styled.footer`
   backdrop-filter: blur(8px);
-  position:sticky; /* fixation du footer */
-  height:80px;
-  bottom:0;
+  position: sticky; /* fixation du footer */
+  height: 80px;
+  bottom: 0;
   border-top: 1px solid black;
-  box-shadow: 0px -3px 14px 2px  ${(props) => props.theme.boxShadow};
+  box-shadow: 0px -3px 14px 2px ${(props) => props.theme.boxShadow};
   width: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(216, 215, 215, 0.13);
 `;
 const GaleriePhoto= styled.div`
   width: 50%;
@@ -136,7 +145,7 @@ const Button = styled.button`
   background-color: transparent;
   outline: 0;
   border: 0;
-  margin: 0;
+  margin-right: 4%;
   cursor: pointer;
   user-select: none;
   vertical-align: middle;
@@ -151,7 +160,6 @@ const Button = styled.button`
   text-transform: uppercase;
   min-width: 64px;
   padding: 6px 8px;
-  margin-right: 2%;
   &:hover {
     transform: scale(1.2);
     transition: all 0.6s ease-in-out;

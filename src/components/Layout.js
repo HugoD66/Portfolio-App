@@ -7,11 +7,6 @@ import React, {useState} from "react";
 import Header from "./fixed/Header";
 import Footer from "./fixed/Footer";
 import Accueil from "./section/Accueil";
-import Competences from "./section/Competences";
-import Contact from "./section/Contact";
-import PortFolio from "./section/Portfolio";
-import Cursus from "./section/Cursus";
-import { Gear, AddOutline } from '@rsuite/icons';
 
 
 
@@ -29,7 +24,6 @@ function Layout({ children }) {
                 <Header />
                     <Main>
                         { children }
-                        <Accueil />
 
                     </Main>
                 <Footer isColored={isColored} handleToogleTheme={handleToogleTheme} />

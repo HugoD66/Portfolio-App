@@ -81,12 +81,16 @@ const ProgressLine = ({
     );
 };
 const Image= styled.img`
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   float:left;
   margin-right: 2%;
   margin-left: 2%;
   margin-bottom: 3%;
+  @media (min-width: 495px) {
+    width: 35px;
+    height: 35px;
+  }
 `;
 const ProgressLineStyle= styled.div`
   margin: 5%;

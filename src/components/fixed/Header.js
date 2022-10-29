@@ -48,7 +48,7 @@ export default function Header (){
                         {...props}
                         style={{
                             position: 'absolute',
-                            backgroundColor: '#00ABB3',
+                            backgroundColor: '#aed4e3',
                             padding: '2px 10px',
                             color: 'white',
                             borderRadius: 3,
@@ -66,6 +66,7 @@ export default function Header (){
 
 // Header
 const Wrapper = styled.header`
+  background-color: rgba(216, 215, 215, 0.13);
   backdrop-filter: blur(8px);
   position: sticky; /* fixation de l'header */
   height: auto;
@@ -78,6 +79,7 @@ const Wrapper = styled.header`
   align-items: center;
   border-bottom: 1px solid black;
   box-shadow: 0px 3px 14px 2px ${(props) => props.theme.boxShadow};
+
   & a {
     text-decoration: none;
     color: inherit;
@@ -92,7 +94,8 @@ const MenuEL=styled.p`
   line-height: 12px;
   font-size: 22px;
   margin-left: 25%;
-  margin-top: 20%;
+  margin-top: 15%;
+  margin-bottom: 15%;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
   &:hover {
@@ -122,7 +125,6 @@ const RightNav=styled.div`
   justify-content: center;
   margin-left: 16%;
   margin-top: 3%;
-
   img {
     width: 28%;
     height: 28%;
@@ -131,10 +133,8 @@ const RightNav=styled.div`
     font-weight: lighter;
     margin-top: 3%;
     cursor: pointer;
-
     &:hover {
       font-weight: bold;
-      
     }
   }
 `;

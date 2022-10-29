@@ -11,9 +11,7 @@ export default function Competences() {
     return (
         <CompetencesTemplate>
             <Tabs
-
-                   className="mb-3"
-                   fill>
+                   >
                 <TabList>
                     <Tab>Général</Tab>
                     <Tab>Technique</Tab>
@@ -27,8 +25,6 @@ export default function Competences() {
             </Tabs>
         </CompetencesTemplate>
     );
-
-
 }
 const CompetencesTemplate = styled.div`
   width: 100%;
