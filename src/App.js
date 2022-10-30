@@ -16,11 +16,11 @@ export default function App() {
       <BrowserRouter>
           <Layout>
               <Routes>
-                  <Route element={< Accueil />} path="/accueil-portfolio-hugo" />
-                  <Route element={< Competences />} path="/compétences-portfolio-hugo" />
+                  <Route element={< Accueil />} path="/"  />
+                  <Route element={< Competences />} path="/compétences-hugo" />
                   <Route element={< Portfolio />} path="/portfolio-hugo" />
-                  <Route element={< Cursus />} path="/cursus-portfolio-hugo" />
-                  <Route element={< Contact />} path="/contact-portfolio-hugo" />
+                  <Route element={< Cursus />} path="/cursus-hugo" />
+                  <Route element={< Contact />} path="/contact-hugo" />
               </Routes>
           </Layout>
       </BrowserRouter>

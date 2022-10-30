@@ -54,8 +54,32 @@ table {
   text-align: center;
   font-size: 1.3em;
   font-family: Consolas, sans-serif;
-  color: black;
+  color: rgba(0, 0, 0, 0.33);
 }
 .progressLabel {
   line-height: 10px;
+}
+
+/* Modal Applications  ! */
+
+.modal-backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(86, 83, 83, 0.43);
+}
+.modal-content-wrapper {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: white;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  border-radius: 15px;
 }

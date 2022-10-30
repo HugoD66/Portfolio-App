@@ -1,5 +1,5 @@
 { "backgroundColor":  "#3C4048",
-  "mainColor":  "#B2B2B2",
+  "mainColor":  "#F8FFFFF1",
   "toolTip":  "#EAEAEA",
   "buttonClicked":  "#00ABB3",
   "buttonNotClicked": "#191F2EFF",
@@ -8,5 +8,5 @@
   "boxShadow" : "#0F26275B",
   "fontTheme" : "\"Arial\",sans-serif",
   "titleFont" : "\"Inconsolata\", monospace",
-  "pictureAccueil" : "public/accueil/accueil-dark.png"
+  "pictureAccueil" : "public/accueil/mobile-back-dark.jpg"
 }

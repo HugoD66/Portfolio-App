@@ -119,6 +119,10 @@ const Complements = styled.div`
   h5 {
     color: ${(props) => props.theme.fontCompGenerale};
     font-family: Consolas,SansSerif,serif;
+    font-size: 1.4em;
+    margin: 2% auto;
+    text-decoration: underline 2px solid ${(props) => props.theme.backSession};
+
   }
 `;
 export default CompTechnique;

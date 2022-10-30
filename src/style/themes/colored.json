@@ -1,12 +1,12 @@
-{ "backgroundColor":  "#F0EBE4FF",
-  "mainColor":  "#462D0CFF",
+{ "backgroundColor":  "#F2F2ECD2",
+  "mainColor":  "#1D1200FF",
   "toolTip":  "#84817a",
   "buttonClicked":  "#BE9275FF",
   "buttonNotClicked": "#C8DBBE",
   "backSession":  "#E5DFD5FF",
   "fontCompGenerale" : "#0E0703FF",
-  "boxShadow" : "#F0FFFDFF",
+  "boxShadow" : "#DCF2EF77",
   "fontTheme" : "\"Roboto\",sans-serif",
   "titleFont" : "\"Inconsolata\", monospace",
-  "pictureAccueil" : "./public/accueil/accueil-light.png"
+  "pictureAccueil" : "public/accueil/mobile-back-light.jpg"
 }

@@ -8,13 +8,25 @@ import CompTechnique from "../UI/CompTechnique";
 
 
 export default function Competences() {
+    const style = {
+        width: "50%",
+        height: '45px',
+        textAlign: 'center',
+        fontSize: '1.5em',
+        fontFamily: "Inconsolata",
+    }
     return (
         <CompetencesTemplate>
-            <Tabs
-                   >
-                <TabList>
-                    <Tab>Général</Tab>
-                    <Tab>Technique</Tab>
+            <Tabs>
+                <TabList
+                    style={{
+                        width: "100%",
+                    }}>
+                    <Tab style={style}>
+                        Général</Tab>
+                    <Tab style={style}
+                    >
+                        Technique</Tab>
                 </TabList>
                 <TabPanel>
                     < CompGeneral />
@@ -31,6 +43,8 @@ const CompetencesTemplate = styled.div`
   margin: auto;
   .tabs{
     width: 100%;
+    ol {
+    }
   }
 `;
 

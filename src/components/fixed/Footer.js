@@ -103,7 +103,6 @@ export default function Footer ({ isColored, handleToogleTheme}){
 }
 const ModalFooterCustom= styled.img`
   display: flex;
-  
 `;
 const Wrapper = styled.footer`
   backdrop-filter: blur(8px);
@@ -111,7 +110,7 @@ const Wrapper = styled.footer`
   height: 80px;
   bottom: 0;
   border-top: 1px solid black;
-  box-shadow: 0px -3px 14px 2px ${(props) => props.theme.boxShadow};
+  box-shadow: 0px -3px 20px 0px ${(props) => props.theme.boxShadow};
   width: 100%;
   z-index: 1;
   display: flex;
@@ -152,16 +151,19 @@ const Button = styled.button`
   -moz-appearance: none;
   -webkit-appearance: none;
   text-decoration: none;
-  color: inherit;
-  font-family:  ${(props) => props.theme.fontTheme};
-  font-weight: 500;
+  font-family: ${(props) => props.theme.fontTheme};
+  font-weight: 700;
   line-height: 1.75;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   min-width: 64px;
   padding: 6px 8px;
+  text-shadow: 0 0 2px #e5f2f1;
+  transition: all 0.6s ease-in-out;
+
   &:hover {
     transform: scale(1.2);
     transition: all 0.6s ease-in-out;
   }
+
 `;

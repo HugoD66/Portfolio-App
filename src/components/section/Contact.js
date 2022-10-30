@@ -2,35 +2,34 @@ import styled from "styled-components";
 import curiculum from "picture/curiculum.svg";
 import phone from "picture/phone.svg";
 import enveloppe from "picture/envelope.svg";
-import ContactForm from "../UI/ContactForm";
 import React, {useState} from 'react';
 import Pdf from 'picture/CV.png';
 import Modal from 'react-bootstrap/Modal';
+import ContactForm from "../UI/ContactFormTest";
+
+
+
 
 export default function Contact() {
 
     const imageClick = (e) => {
         window.location = "tel:0662560152"
-
     }
     const imageMail = (e) => {
         window.location.href  = "mailto:dessauw.hugo@gmail.com"
-
     }
-
     const [showModalPdf, setShowModalPdf] = useState(false);
     const handleClosePdf = () => setShowModalPdf(false);
     const handleShowPdf = () => setShowModalPdf(true);
-
-
     return (
         <ContactTemplate>
             <Description>
-                    Si vous souhaitez en savoir plus,
-                    merci de remplir le formulaire
+                <p> Si vous souhaitez en savoir plus,
+                    complétez le formulaire
                     de contact. Mes coordonnées
                     sont également mises
                     à disposition.
+                </p>
                 <div className="icones">
                     <img src={phone} alt="Tel"  onClick={() => imageClick()}/>
                     <img email="dessauw.hugo@gmail.com" src={enveloppe} alt="Enveloppe" onClick={(e) => imageMail}/>
@@ -53,23 +52,25 @@ export default function Contact() {
                 </Modal.Dialog>
             </Modal>
         </ContactTemplate>
-
-
     );
 }
 const ContactTemplate = styled.div`
   margin-top: 5%;
 `;
-const Description= styled.p`
+const Description= styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: large;
+  font-size: 1.2em;
   text-align: justify;
   width: 90%;
   margin: 5% auto;
   color: ${(props) => props.theme.fontCompGenerale};
+  p {
+    width: 75%;
+    line-height: 1.5em;
+  }
   .icones {
     display: flex;
     justify-content: center;
@@ -126,7 +127,6 @@ const Btn = styled.button`
   padding: 6px 8px;
   margin-right: 2%;
   transition: all 0.6s ease-in-out;
-  color:  inherit;
 
   &:hover {
     transform: scale(1.2);

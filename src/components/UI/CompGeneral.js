@@ -39,18 +39,23 @@ function CompGeneral(props) {
     );
 }
 const Description= styled.p`
-  font-size: large;
-  text-align: justify;
-  width: 90%;
-  margin: 5% auto;
-  color: ${(props) => props.theme.fontCompGenerale};
+
+    width: 75%;
+    line-height: 1.5em;
+    color: ${(props) => props.theme.fontCompGenerale};
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 5% auto;
+  
 `;
 const SavoirEtre= styled.div`
   text-align: center;
 
   h4 {
     color: ${(props) => props.theme.fontCompGenerale};
-    font-family: Consolas,SansSerif,serif;
+    font-size: 1.4em;
+    margin: 2% auto;
+    text-decoration: underline 2px solid ${(props) => props.theme.backSession};
   }
 `;
 const Languages= styled.div`

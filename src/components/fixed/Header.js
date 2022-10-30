@@ -11,13 +11,13 @@ export default function Header (){
     return (
         <Wrapper>
             <Nav>
-                <Link to="/accueil-portfolio-hugo">
-                    <MenuEL isCurrentPage={location.pathname === "/accueil-portfolio-hugo"}>
+                <Link to="/">
+                    <MenuEL isCurrentPage={location.pathname === "/"}>
                         Accueil
                     </MenuEL>
                 </Link>
-                <Link to="/compétences-portfolio-hugo">
-                    <MenuEL isCurrentPage={location.pathname === "/compétences-portfolio-hugo"}>
+                <Link to="/compétences-hugo">
+                    <MenuEL isCurrentPage={location.pathname === "/compétences-hugo"}>
                         Compétences
                     </MenuEL>
                 </Link>
@@ -26,20 +26,19 @@ export default function Header (){
                         Portfolio
                     </MenuEL>
                 </Link>
-                <Link to="/cursus-portfolio-hugo">
-                    <MenuEL isCurrentPage={location.pathname === "/cursus-portfolio-hugo"}>
+                <Link to="/cursus-hugo">
+                    <MenuEL isCurrentPage={location.pathname === "/cursus-hugo"}>
                         Cursus
                     </MenuEL>
                 </Link>
-                <Link to="/contact-portfolio-hugo">
-                    <MenuEL isCurrentPage={location.pathname === "/contact-portfolio-hugo"}>
+                <Link to="/contact-hugo">
+                    <MenuEL isCurrentPage={location.pathname === "/contact-hugo"}>
                         Contact
                     </MenuEL>
                 </Link>
             </Nav>
             <RightNav >
-                <img src={HD} alt="Icone Hugo DESSAUW"/>
-                <Hugo ref={target} onClick={() => setShow(!show)}>Hugo DESSAUW</Hugo>
+                <img src={HD} alt="Icone Hugo DESSAUW" ref={target} onClick={() => setShow(!show)}/>
             </RightNav>
 
             <Overlay target={target.current} show={show} placement="left">
@@ -78,8 +77,7 @@ const Wrapper = styled.header`
   margin: auto;
   align-items: center;
   border-bottom: 1px solid black;
-  box-shadow: 0px 3px 14px 2px ${(props) => props.theme.boxShadow};
-
+  box-shadow: 0px 3px 14px 1px ${(props) => props.theme.boxShadow};
   & a {
     text-decoration: none;
     color: inherit;
@@ -136,14 +134,5 @@ const RightNav=styled.div`
     &:hover {
       font-weight: bold;
     }
-  }
-`;
-const Hugo = styled.p`
-  &:hover {
-    font-weight: bold;
-    text-decoration: underline solid 1px ${(props) => props.theme.mainColor};
-    transform: scale(1.2);
-    transition: all 0.6s ease-in-out;
-    color: ${(props) => props.theme.buttonClicked};
   }
 `;

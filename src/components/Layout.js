@@ -6,7 +6,6 @@ import darkTheme from '../style/themes/dark.json';
 import React, {useState} from "react";
 import Header from "./fixed/Header";
 import Footer from "./fixed/Footer";
-import Accueil from "./section/Accueil";
 
 
 
@@ -18,7 +17,7 @@ function Layout({ children }) {
         setIsColored(!isColored);
     }
     return (
-        <ThemeProvider theme={isColored ? coloredTheme : darkTheme}>
+        <ThemeProvider theme={isColored ? darkTheme : coloredTheme}>
             <Wrapper>
                 <GlobalStyle />
                 <Header />
@@ -37,7 +36,7 @@ const Wrapper =styled.div`
     
 `;
 const Main = styled.div`
-  min-height: 100vh;
+  min-height: 91vh;
 `;
 
 export default Layout;
