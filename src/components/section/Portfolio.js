@@ -14,7 +14,6 @@ export default function PortFolio({props}) {
                 qui ont été mis en ligne :
             </p>
             < LienApps />
-            < Carousel />
         </PortFolioTemplate>
     );
 }
