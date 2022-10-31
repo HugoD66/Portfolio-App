@@ -63,23 +63,24 @@ const ExplainContent= styled.div`
   h1 {
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 45px;
     position: absolute;
     opacity: 0;
     text-align: end;
     font-family: 'Montserrat', sans-serif;
+    left: -40px;
   }
   h2 {
     position: absolute;
     font-weight: bold;
     top: 80px;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 45px;
     opacity: 0;
     text-align: end;
     margin: auto;
     width: auto;
-    left: 150px;
+    left: 110px;
     color: ${(props) => props.theme.boxShadow};
     filter: blur(4px);
     font-family: 'Lora', serif;

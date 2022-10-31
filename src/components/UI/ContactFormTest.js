@@ -112,6 +112,7 @@ const ContactFormTestTemplate = styled.div`
       align-items: center;
       margin: 10% auto;
       padding: 5%;
+      margin-bottom: 20%;
     label {
       margin-top: 2%;
       font-size: 18px;
