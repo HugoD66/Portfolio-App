@@ -36,7 +36,7 @@ const Wrapper =styled.div`
     
 `;
 const Main = styled.div`
-  min-height: 91vh;
+  min-height: 95vh;
 `;
 
 export default Layout;

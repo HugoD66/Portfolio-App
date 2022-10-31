@@ -246,9 +246,9 @@ const ListeAppli = styled.div `
   img {
     border : 1px solid ${(props) => props.theme.buttonClicked};
     border-radius: 90%;
-    min-width:  3.2em;;
-    width: 3.2em;
-    height: 3.2em;
+    min-width:  3.8em;;
+    width: 3.8em;
+    height: 3.8em;
     padding: 4px;
     margin: 13px;
     -o-transition: background-color 0.4s ease-out;

@@ -81,8 +81,8 @@ const Description= styled.div`
     img {
       margin: 5% auto;
       padding: 9px;
-      width: 7em;
-      height: 7em;
+      width: 5em;
+      height: 5em;
       border: 2px solid ${(props) => props.theme.backSession};
       border-radius: 20px;
       -o-transition: background-color 0.4s ease-out;

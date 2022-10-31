@@ -105,6 +105,7 @@ const ModalFooterCustom= styled.img`
   display: flex;
 `;
 const Wrapper = styled.footer`
+  margin-top: auto;
   backdrop-filter: blur(8px);
   position: sticky; /* fixation du footer */
   height: 80px;
@@ -165,5 +166,4 @@ const Button = styled.button`
     transform: scale(1.2);
     transition: all 0.6s ease-in-out;
   }
-
 `;

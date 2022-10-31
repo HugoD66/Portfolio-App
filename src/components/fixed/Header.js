@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import HD from "../../picture/HD-removedBack.png"
+import HD from "../../picture/hd.png"
 import React, { useState, useRef } from 'react';
 import {Overlay} from "react-bootstrap";
 
@@ -41,7 +41,7 @@ export default function Header (){
                 <img src={HD} alt="Icone Hugo DESSAUW" ref={target} onClick={() => setShow(!show)}/>
             </RightNav>
 
-            <Overlay target={target.current} show={show} placement="left">
+            <Overlay target={target.current} show={show} placement="bottom">
                 {({ placement, arrowProps, show: _show, popper, ...props }) => (
                     <OverlayTemplate
                         {...props}
@@ -52,9 +52,19 @@ export default function Header (){
                             color: 'white',
                             borderRadius: 3,
                             ...props.style,
+                            boxShadow: '0px 0px 17px -2px #000000\n'
                         }}
                     >
-                    DESCRIPTION
+                        <OverlayContent>
+                            <ul>
+                                <li>Adresse : 21 Rue Nicolas Poussin</li>
+                                <li>Formation : Developpeur Web</li>
+                                <li>Nationalité : Francais</li>
+                                <li>Ville : Perpignan</li>
+                                <li>Age :30 ans</li>
+                            </ul>
+                        </OverlayContent>
+
                     </OverlayTemplate>
                 )}
             </Overlay>
@@ -62,7 +72,11 @@ export default function Header (){
     )
 }
 //Hugo Tooltip
-
+const OverlayContent = styled.div`
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-family: ${(props) => props.theme.fontTheme};
+`;
 // Header
 const Wrapper = styled.header`
   background-color: rgba(216, 215, 215, 0.13);
@@ -117,22 +131,18 @@ const Nav = styled.nav`
 `;
 // Nom/Icone
 const RightNav=styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 16%;
-  margin-top: 3%;
-  img {
-    width: 28%;
-    height: 28%;
-  }
-  p {
-    font-weight: lighter;
+    margin-right: 4%;
     margin-top: 3%;
-    cursor: pointer;
-    &:hover {
-      font-weight: bold;
-    }
+    margin-bottom: 3%;
+  img {
+    max-width: 9em;
+    max-height: 9em;
+    transition: all 0.3s ease-in-out;
+
+  }
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.15);
+
   }
 `;
