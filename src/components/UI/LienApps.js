@@ -123,29 +123,30 @@ export default function LienApps () {
         <div>
         <ListeAppli>
 {/* Modal Hypnos */}
-                <div onClick={() => modalHypnos.current.open()}>
-                    <img src={HypnosLogo} alt=""/>
-                </div>
+                <BouttonAppli onClick={() => modalHypnos.current.open()}>
+                    <img src={HypnosLogo} alt="Bouton Hypnos"/>
+                    <p>Hypnos</p>
+                </BouttonAppli>
 {/* Modal Dantabase */}
-                <div onClick={() => modalDantabase.current.open()}>
-                    <img src={DanatabseLogo} alt=""/>
-
-                </div>
+                <BouttonAppli onClick={() => modalDantabase.current.open()}>
+                    <img src={DanatabseLogo} alt="Bouton Dantabse"/>
+                    <p>Dantabase</p>
+                </BouttonAppli>
 {/* Modal Ecoit */}
-                <div onClick={() => modalEcoit.current.open()}>
-                    <img src={EcoitLogo} alt=""/>
-
-                </div>
+                <BouttonAppli onClick={() => modalEcoit.current.open()}>
+                    <img src={EcoitLogo} alt="Bouton Ecoit"/>
+                    <p>Ecoit</p>
+                </BouttonAppli>
 {/* Modal Appli musicale */}
-                <div onClick={() => modalMusic.current.open()}>
-                    <img src={DrumLogo} alt=""/>
-
-                </div>
+                <BouttonAppli onClick={() => modalMusic.current.open()}>
+                    <img src={DrumLogo} alt="Bouton Drum"/>
+                    <p>Musique</p>
+                </BouttonAppli>
 {/* Modal Clipboard Maquette */}
-                <div onClick={() => modalClip.current.open()}>
-                    <img src={ClipLogo} alt=""/>
-
-                </div>
+                <BouttonAppli onClick={() => modalClip.current.open()}>
+                    <img src={ClipLogo} alt="Bouton Clipboard"/>
+                    <p>Clipboard</p>
+                </BouttonAppli>
         </ListeAppli>
 
         <ModalCustom>
@@ -233,6 +234,39 @@ export default function LienApps () {
         </div>
     );
 }
+
+const ListeAppli = styled.div `
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  margin: auto;
+  width: 96%;
+  flex-direction: column;
+  font-family: ${(props) => props.theme.titleFont};
+  img {
+    border : 1px solid ${(props) => props.theme.buttonClicked};
+    border-radius: 90%;
+    min-width:  3.2em;;
+    width: 3.2em;
+    height: 3.2em;
+    padding: 4px;
+    margin: 13px;
+    -o-transition: background-color 0.4s ease-out;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+    &:hover{
+      transform: scale(1.2);
+      transition: all 0.5s ease-in-out;
+      background-color: ${(props) => props.theme.backSession};
+    }
+  }
+`;
+const BouttonAppli = styled.div`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+`;
 const Button = styled.button`
     width: 80px;
     margin: 20% auto;
@@ -290,30 +324,5 @@ const ModalButtons = styled.button`
   &:hover {
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
-  }
-`;
-const ListeAppli = styled.div `
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: auto;
-  width: 96%;
-  
-  img {
-    border : 1px solid ${(props) => props.theme.buttonClicked};
-    border-radius: 90%;
-    width: 3.2em;
-    height: 3.2em;
-    padding: 4px;
-    margin: 8px;
-    -o-transition: background-color 0.4s ease-out;
-    cursor: pointer;
-    transition: all 0.6s ease-in-out;
-    &:hover{
-      transform: scale(1.2);
-      transition: all 0.5s ease-in-out;
-      background-color: ${(props) => props.theme.backSession};
-
-    }
   }
 `;

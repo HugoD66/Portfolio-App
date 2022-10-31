@@ -37,21 +37,13 @@ export default function Accueil({isColored}) {
     }, 5);
 
 
-
-
-
-
     return (
-        <AccueilTemplate style={{
-            backgroundImage: isColored ? `url(${DarkPic})` : `url(${LightPic}`
-
+        <AccueilTemplate className="styleBack" style={{
             /*
-                        backgroundImage: `url(${(props) => props.theme.pictureAccueil})`
-
             backgroundImage: `url(${(props) => props.theme.pictureAccueil})`
-
+            backgroundImage: isColored ? `url(${DarkPic})` : `url(${LightPic}`
+            backgroundImage: `url(${(props) => props.theme.pictureAccueil})`
              */
-
         }}
         >
             <ExplainContent>
@@ -95,7 +87,6 @@ const ExplainContent= styled.div`
   }
 `;
 const AccueilTemplate = styled.div`
-  
   width: 100%;
   margin: auto;
   height: 680px;
@@ -105,7 +96,8 @@ const AccueilTemplate = styled.div`
   clear: both;
   overflow-x: hidden;
   position: relative;
-
+  background-image: url(${LightPic});
+}
 `;
 
 
