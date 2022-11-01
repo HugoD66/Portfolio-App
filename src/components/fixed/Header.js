@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import HD from "../../picture/hd.png"
+import HD from "../../picture/logo-HD.png"
 import React, { useState, useRef } from 'react';
 import {Overlay} from "react-bootstrap";
 
@@ -96,6 +96,9 @@ const Wrapper = styled.header`
     text-decoration: none;
     color: inherit;
   }
+  @media (min-width: 1100px) {
+    height: 140px;
+  }
 `;
 const OverlayTemplate=styled.div`
   z-index: 2;
@@ -119,6 +122,7 @@ const MenuEL=styled.p`
   }
   @media (min-width: 1100px) {
     width: 150px;
+    font-size: 1.5em;
   }
 `;
 const Nav = styled.nav`
@@ -132,11 +136,10 @@ const Nav = styled.nav`
 // Nom/Icone
 const RightNav=styled.div`
     margin-right: 4%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+
   img {
-    max-width: 9em;
-    max-height: 9em;
+    max-width: 7em;
+    max-height: 7em;
     transition: all 0.3s ease-in-out;
 
   }

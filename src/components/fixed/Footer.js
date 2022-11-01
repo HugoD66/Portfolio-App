@@ -103,6 +103,7 @@ export default function Footer ({ isColored, handleToogleTheme}){
 }
 const ModalFooterCustom= styled.img`
   display: flex;
+  
 `;
 const Wrapper = styled.footer`
   margin-top: auto;
@@ -118,6 +119,9 @@ const Wrapper = styled.footer`
   align-items: center;
   justify-content: space-between;
   background-color: rgba(216, 215, 215, 0.13);
+  @media (min-width: 1100px) {
+    height: 100px;
+  }
 `;
 const GaleriePhoto= styled.div`
   width: 50%;
@@ -133,6 +137,18 @@ const Im = styled.img`
     filter: blur(3px);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+  }
+  @media (min-width: 800px ) {
+    width: 10%;
+    height: 10%;
+  }
+  @media (min-width: 1300px ) {
+    width: 7%;
+    height: 7%;
+  }
+  @media (min-width: 1600px ) {
+    width: 4%;
+    height: 4%;
   }
 `;
 const Button = styled.button`
@@ -154,16 +170,18 @@ const Button = styled.button`
   text-decoration: none;
   font-family: ${(props) => props.theme.fontTheme};
   font-weight: 700;
-  line-height: 1.75;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   min-width: 64px;
   padding: 6px 8px;
   text-shadow: 0 0 2px #e5f2f1;
   transition: all 0.6s ease-in-out;
-
+  line-height: 1.75;
   &:hover {
     transform: scale(1.2);
     transition: all 0.6s ease-in-out;
+  }
+  @media (min-width: 1600px ) {
+   font-size: 1.4em;
   }
 `;

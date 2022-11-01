@@ -33,10 +33,11 @@ function Layout({ children }) {
 
 
 const Wrapper =styled.div`
-    
+
 `;
 const Main = styled.div`
-  min-height: 95vh;
+  min-height: calc(100vh);
+
 `;
 
 export default Layout;
