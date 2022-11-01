@@ -97,10 +97,16 @@ export default function Cursus() {
 const CursusTemplate = styled.div`
   width: 90%;
   margin: 5% auto;
-
+  @media (min-width: 1500px) {
+    width: 80%;
+  }
   .accordion-button {
     box-shadow: 0px 0px 22px -1px rgba(0, 0, 0, 0.53);
     height: 5em;
+    z-index: 0;
+    @media (min-width: 1500px) {
+      font-size: 1.5em;
+    }
   }
 
   .accordion-button:focus {
@@ -122,13 +128,19 @@ const CursusTemplate = styled.div`
   p {
     width: 90%;
     text-align: justify;
-    margin: auto;
+    margin: 3% auto;
     line-height: 1.15;
     font-family: ${(props) => props.theme.fontTheme};
+    @media (min-width: 1500px) {
+      font-size: 1.3em;
+    }
   }
 
   img {
     width: 2em;
+    @media (min-width: 1500px) {
+      width: 3em;
+    }
   }
 
   ul {
@@ -138,10 +150,15 @@ const CursusTemplate = styled.div`
     margin: 4% auto;
     line-height: 1.40;
     font-family: ${(props) => props.theme.fontTheme};
-
+    @media (min-width: 1500px) {
+      width: 60%;
+    }
     li {
       font-size: 1.1em;
       font-family: "Calibri Light", sans-serif;
+    }
+    @media (min-width: 1500px) {
+      font-size: 1.2em;
     }
   }
 `;

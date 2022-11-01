@@ -46,37 +46,18 @@ const ProgressLine = ({
                 <Image src={picture} alt="Logo langage"/>
             </OverlayTrigger>
 
-            <div
-                className="progressVisualFull"
-                // to change the background color dynamically
-
-            >
-
+            <div className="progressVisualFull" >
                 {visualParts.map((item, index) => {
-                    // map each part into separate div and each will be animated
-                    // because of the "transition: width 2s;" css in class "progressVisualPart"
-                    // and because of the new width ("widths[index]", previous one was 0)
-
                     return (
-
-                            <div
-                                // There won't be additional changes in the array so the index can be used
-                                /* eslint-disable-next-line react/no-array-index-key */
-                                key={index}
+                            <div key={index}
                                 style={{
                                     width: widths[index],
-                                    // setting the actual color of bar part
                                 }}
                                 className="progressVisualPart"
                             />
-
-
                     );
-
                 })}
-
             </div>
-
         </ProgressLineStyle>
     );
 };
@@ -84,49 +65,49 @@ const Image= styled.img`
   width: 28px;
   height: 28px;
   float:left;
-  margin-right: 2%;
-  margin-left: 2%;
-  margin-bottom: 3%;
+  margin-right: 3%;
   @media (min-width: 495px) {
     width: 35px;
     height: 35px;
   }
+  @media (min-width: 1500px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 const ProgressLineStyle= styled.div`
-  margin: 5%;
-  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  @media (min-width: 1500px) {
+    margin: 3% auto;
+  }
   .progressVisualFull {
     display: flex;
     background-color: ${(props) => props.theme.buttonNotClicked};
     /* Largeur ProgressBar */
     height: 15px;
-    margin: 20px 0;
     width: 80%;
-    margin-top: 8%;
     border-radius: 8px;
+    @media (min-width: 1500px) {
+      height: 25px;
+    }
   }
-
   .progressVisualPart {
-    /* Number of the seconds for complete animation */
     transition: width 3s;
     background-color: ${(props) => props.theme.buttonClicked};
     border-radius: 8px;
-
   }
-
   .progressLabel {
-    /* Nothing here, move along */
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
-
   body {
-    
-    margin: 20px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #e5e5e5;
     border-radius: 6px;
   }`;
-
-
 export default ProgressLine;

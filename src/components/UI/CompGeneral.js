@@ -46,16 +46,28 @@ const Description= styled.p`
     font-size: 1.2em;
     text-align: justify;
     margin: 5% auto;
-  
+    @media (min-width: 1500px) {
+      font-size: 1.4em;
+      text-align: center;
+      margin-top: 7%;
+    }
 `;
 const SavoirEtre= styled.div`
   text-align: center;
-
   h4 {
     color: ${(props) => props.theme.fontCompGenerale};
     font-size: 1.4em;
     margin: 2% auto;
     text-decoration: underline 2px solid ${(props) => props.theme.backSession};
+    @media (min-width: 1500px) {
+      margin: auto 1%;
+      font-size: 2em;
+    }
+  }
+  p {
+    @media (min-width: 1500px) {
+      font-size: 1.3em;
+    }
   }
 `;
 const Languages= styled.div`
@@ -66,6 +78,9 @@ const Languages= styled.div`
   margin: 6% auto;
   background-color: ${(props) => props.theme.backSession};
   border-radius: 20px;
+  @media (min-width: 1500px) {
+    width: 60%;
+  }
   .dashboard {
     display: flex;
     flex-direction: column;
@@ -75,9 +90,11 @@ const Languages= styled.div`
     h4 {
       color: ${(props) => props.theme.fontCompGenerale};
       font-family: Consolas,SansSerif,serif;
+      @media (min-width: 1500px) {
+        font-size: 2em;
+      }
     }
   }
-  
 `;
 const Rounded = styled.div`
   body {

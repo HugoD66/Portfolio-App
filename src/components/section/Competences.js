@@ -10,7 +10,7 @@ import CompTechnique from "../UI/CompTechnique";
 export default function Competences() {
     const style = {
         width: "50%",
-        height: '45px',
+        height: '47px',
         textAlign: 'center',
         fontSize: '1.5em',
         fontFamily: "Inconsolata",
@@ -41,11 +41,12 @@ export default function Competences() {
 const CompetencesTemplate = styled.div`
   width: 100%;
   margin: auto;
-  .tabs{
-    width: 100%;
-    ol {
-    }
+  
+  @media (min-width: 1500px) {
+    width: 84%;
+    margin: 4% auto;
   }
+
 `;
 
 

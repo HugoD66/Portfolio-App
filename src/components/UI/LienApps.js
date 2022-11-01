@@ -125,30 +125,41 @@ export default function LienApps () {
 {/* Modal Hypnos */}
                 <BouttonAppli onClick={() => modalHypnos.current.open()}>
                     <img src={HypnosLogo} alt="Bouton Hypnos"/>
-                    <p>Hypnos</p>
+                    <div className="title1">
+                        <p>Hypnos</p>
+                    </div>
                 </BouttonAppli>
 {/* Modal Dantabase */}
                 <BouttonAppli onClick={() => modalDantabase.current.open()}>
                     <img src={DanatabseLogo} alt="Bouton Dantabse"/>
-                    <p>Dantabase</p>
+                    <div className="title2">
+                        <p>Dantabase</p>
+
+                    </div>
                 </BouttonAppli>
 {/* Modal Ecoit */}
                 <BouttonAppli onClick={() => modalEcoit.current.open()}>
                     <img src={EcoitLogo} alt="Bouton Ecoit"/>
-                    <p>Ecoit</p>
+                    <div className="title3">
+                        <p>Ecoit</p>
+                    </div>
                 </BouttonAppli>
 {/* Modal Appli musicale */}
                 <BouttonAppli onClick={() => modalMusic.current.open()}>
                     <img src={DrumLogo} alt="Bouton Drum"/>
-                    <p>Musique</p>
+                    <div className="title4">
+                        <p>Musique</p>
+                    </div>
                 </BouttonAppli>
 {/* Modal Clipboard Maquette */}
                 <BouttonAppli onClick={() => modalClip.current.open()}>
                     <img src={ClipLogo} alt="Bouton Clipboard"/>
-                    <p>Clipboard</p>
+                    <div className="title5">
+                        <p>Clipboard</p>
+
+                    </div>
                 </BouttonAppli>
         </ListeAppli>
-
         <ModalCustom>
 {/* Modal Hypnos */}
                 <Modal ref={modalHypnos}>
@@ -234,7 +245,6 @@ export default function LienApps () {
         </div>
     );
 }
-
 const ListeAppli = styled.div `
   display: flex;
   align-items: start;
@@ -243,6 +253,10 @@ const ListeAppli = styled.div `
   width: 96%;
   flex-direction: column;
   font-family: ${(props) => props.theme.titleFont};
+  @media (min-width: 1500px) {
+    flex-direction: row;
+    margin: 4%;
+  }
   img {
     border : 1px solid ${(props) => props.theme.buttonClicked};
     border-radius: 90%;
@@ -250,7 +264,6 @@ const ListeAppli = styled.div `
     width: 3.8em;
     height: 3.8em;
     padding: 4px;
-    margin: 13px;
     -o-transition: background-color 0.4s ease-out;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
@@ -259,6 +272,10 @@ const ListeAppli = styled.div `
       transition: all 0.5s ease-in-out;
       background-color: ${(props) => props.theme.backSession};
     }
+    @media (min-width: 1500px) {
+      width: 4.8em;
+      height: 4.8em;
+    }
   }
 `;
 const BouttonAppli = styled.div`
@@ -266,18 +283,23 @@ const BouttonAppli = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: row;
-`;
-const Button = styled.button`
-    width: 80px;
-    margin: 20% auto;
+      margin: 4%;
+  @media (min-width: 1500px) {
+    margin: 8%;
+  }
 `;
 const ModalCustom = styled.div`
+  .modal-content-wrapper {
+    @media (min-width: 1500px) {
+      width: 50%;
+    }
+  }
 `;
-
 const ModalTitleAndLogo = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-height: 20%;
   h1 {
     color: #343434;
     font-size: 1.4em;
@@ -290,17 +312,31 @@ const ModalTitleAndLogo = styled.div`
   img {
     max-width: 20%;
     margin-left: 50%;
+    @media (min-width: 1500px) {
+      max-width: 5%;
+    }
   }
 `;
 const ModalScreenAndDescript = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   margin: 15% auto;
+  @media (min-width: 1500px) {
+    margin: 6% auto;
+  }
   img {
-    max-width: 63%;
+    width: 40%;
+    height: 15%;
+    max-width: 40%;
+    max-height: 15%;
     box-shadow: 0px 0px 7px -2px #000000;
+    @media (min-width: 1500px) {
+      width: 30%;
+      height: 20%;
+      max-width: 30%;
+      max-height: 20%;    
+    }
   }
   p {
     margin-left: 10%;
@@ -320,9 +356,13 @@ const ModalButtons = styled.button`
   transition: all 0.3s ease-in-out;
   background-color: ${(props) => props.theme.backSession};
   color: Black;
-  
   &:hover {
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
+  }
+  @media (min-width: 1500px) {
+    width: 20%;
+    height: 4em;
+    margin: auto;
   }
 `;

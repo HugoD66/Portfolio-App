@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import styled from "styled-components";
+
 import Facebook from "picture/footer/facebook.svg";
 import Github from "picture/footer/github.svg";
 import Discord from "picture/footer/discord.svg";
@@ -8,7 +9,6 @@ import Linkedin from "picture/footer/linkedin.svg";
 import Fb from "picture/modal/fb-color.png";
 import Git from "picture/modal/git-color.png";
 import Disc from "picture/modal/disc-color.png";
-import Link from "picture/modal/link-color.png";
 
 export default function Footer ({ isColored, handleToogleTheme}){
     const [showFacebook, setShowFacebook] = useState(false);
@@ -33,6 +33,7 @@ export default function Footer ({ isColored, handleToogleTheme}){
     }
 
     return (
+        <>
         <Wrapper>
             <GaleriePhoto className="galerie-photo">
                 <Im className="e-icon" src={Facebook} onClick={handleShowFacebook} />
@@ -42,69 +43,81 @@ export default function Footer ({ isColored, handleToogleTheme}){
             </GaleriePhoto>
 
             <Button  className="button-theme" variant="outlined" onClick={handleToogleTheme}> Thème { isColored ? "Sombre" : "Clair"}</Button>
-            {/*modal FB*/}
-            <Modal className="modal" show={showFacebook} onHide={handleCloseFacebook}>
-                <img width="30px" height="30px" src={Fb} alt="Photo couleur Facebook"/>
-                <Modal.Body className="modal-body"><a href="https://www.facebook.com/hugo.dessauw">https://www.facebook.com/hugo.dessauw</a></Modal.Body>
-                <Modal.Footer>
-                        <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.facebook.com/hugo.dessauw")}>
+        </Wrapper>
+
+    {/*modal FB*/}
+            <ModalCustom>
+                <Modal className="modal" show={showFacebook} onHide={handleCloseFacebook}>
+                    <img width="30px" height="30px" src={Fb} alt="Photo couleur Facebook"/>
+                    <Modal.Body className="modal-body"><a href="https://www.facebook.com/hugo.dessauw">https://www.facebook.com/hugo.dessauw</a></Modal.Body>
+                    <Modal.Footer>
+                            <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.facebook.com/hugo.dessauw")}>
+                                <p onClick={handleSubmit}> Copier
+                                </p>
+                            </Button>
+                            <Button variant="primary" onClick={handleCloseFacebook}>
+                            <p>Fermer</p>
+                            </Button>
+                    </Modal.Footer>
+                </Modal>
+            </ModalCustom>
+            {/*modal Git*/}
+            <ModalCustom>
+                <Modal className="modal" show={showGithub} onHide={handleCloseGithub}>
+                    <img width="30px" height="30px" src={Git} alt="Photo couleur Facebook"/>
+                    <Modal.Body className="modal-body"><a href="https://github.com/HugoD66?tab=repositories">https://github.com/HugoD66?tab=repositories</a></Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://github.com/HugoD66?tab=repositories")}>
                             <p onClick={handleSubmit}> Copier
                             </p>
                         </Button>
-                        <Button variant="primary" onClick={handleCloseFacebook}>
-                        <p>Fermer</p>
+                        <Button variant="primary" onClick={handleCloseGithub}>
+                            <p>Fermer</p>
                         </Button>
-                </Modal.Footer>
-            </Modal>
-            {/*modal Git*/}
-            <Modal className="modal" show={showGithub} onHide={handleCloseGithub}>
-                <img width="30px" height="30px" src={Git} alt="Photo couleur Facebook"/>
-                <Modal.Body className="modal-body"><a href="https://github.com/HugoD66?tab=repositories">https://github.com/HugoD66?tab=repositories</a></Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://github.com/HugoD66?tab=repositories")}>
-                        <p onClick={handleSubmit}> Copier
-                        </p>
-                    </Button>
-                    <Button variant="primary" onClick={handleCloseGithub}>
-                        <p>Fermer</p>
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+                    </Modal.Footer>
+                </Modal>
+            </ModalCustom>
+
             {/*modal Discord*/}
-            <Modal className="modal" show={showDiscord} onHide={handleCloseDiscord}>
-                <img width="30px" height="30px" src={Disc} alt="Photo couleur Facebook"/>
-                <Modal.Body className="modal-body"><a href="https://discord.com/channels/@me">Enök#2857</a></Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => navigator.clipboard.writeText("Enök#2857")}>
-                        <p onClick={handleSubmit}> Copier
-                        </p>
-                    </Button>
-                    <Button variant="primary" onClick={handleCloseDiscord}>
-                        <p>Fermer</p>
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <ModalCustom>
+                <Modal className="modal" show={showDiscord} onHide={handleCloseDiscord}>
+                    <img width="30px" height="30px" src={Disc} alt="Photo couleur Facebook"/>
+                    <Modal.Body className="modal-body"><a href="https://discord.com/channels/@me">Enök#2857</a></Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => navigator.clipboard.writeText("Enök#2857")}>
+                            <p onClick={handleSubmit}> Copier
+                            </p>
+                        </Button>
+                        <Button variant="primary" onClick={handleCloseDiscord}>
+                            <p>Fermer</p>
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </ModalCustom>
+
             {/*modal Linkedin*/}
-            <Modal className="modal" show={showLinkedin} onHide={handleCloseLinkedin}>
-                <img width="30" height="30" src={Link} alt="Photo couleur Facebook"/>
-                <Modal.Body className="modal-body"><a href="https://www.linkedin.com/in/hugo-dessauw-07a901250/">https://www.linkedin.com/in/hugo-dessauw-07a901250/</a></Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.linkedin.com/in/hugo-dessauw-07a901250/")}>
-                        <p onClick={handleSubmit}> Copier
-                        </p>
-                    </Button>
-                    <Button variant="primary" onClick={handleCloseLinkedin}>
-                        <p>Fermer</p>
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </Wrapper>
+            <ModalCustom>
+                <Modal className="modal" width="auto" show={showLinkedin} onHide={handleCloseLinkedin}>
+                    <Modal.Body className="modal-body"><a href="https://www.linkedin.com/in/hugo-dessauw-07a901250/">https://www.linkedin.com/in/hugo-dessauw-07a901250/</a></Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => navigator.clipboard.writeText("https://www.linkedin.com/in/hugo-dessauw-07a901250/")}>
+                            <p onClick={handleSubmit}> Copier
+                            </p>
+                        </Button>
+                        <Button variant="primary" onClick={handleCloseLinkedin}>
+                            <p>Fermer</p>
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </ModalCustom>
+
+        </>
     )
 }
-const ModalFooterCustom= styled.img`
-  display: flex;
-  
+const ModalCustom= styled.div`
+
 `;
+
 const Wrapper = styled.footer`
   margin-top: auto;
   backdrop-filter: blur(8px);

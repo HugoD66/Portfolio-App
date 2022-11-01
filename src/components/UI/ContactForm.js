@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 
 
-export default function ContactFormTest ()  {
+export default function ContactForm ()  {
 
 
     const { handleSubmit, formState } = useForm();
@@ -50,7 +50,7 @@ export default function ContactFormTest ()  {
 
 
     return (
-        <ContactFormTestTemplate>
+        <ContactFormTemplate>
                 <TitreForm>Me contacter</TitreForm>
                 <Form onSubmit={handleSubmit(onSubmit, onSubmitMail)}>
                     <Champs>
@@ -99,24 +99,32 @@ export default function ContactFormTest ()  {
                         </div>
                     </Champs>
                 </Form>
-        </ContactFormTestTemplate>
+        </ContactFormTemplate>
     );
 }
-const ContactFormTestTemplate = styled.div`
+const ContactFormTemplate = styled.div`
+  @media (min-width: 1500px) {
+    width: 50%;
+  }
     form{
       border: 2px solid ${(props) => props.theme.backSession};
       border-radius: 20px;
-      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 10% auto;
       padding: 5%;
       margin-bottom: 20%;
+      @media (min-width: 1500px) {
+        width: 80%;
+      }
     label {
       margin-top: 2%;
       font-size: 18px;
-      font-family: ${(props) => props.theme.fontTheme}
+      font-family: ${(props) => props.theme.fontTheme};
+      @media (min-width: 1500px) {
+        font-size: 1.5em;
+      }
     }
     input , textarea {
         margin-top: 5%;
@@ -125,18 +133,23 @@ const ContactFormTestTemplate = styled.div`
         width: 100%;
         transition: all 0.6s ease-in-out;
         border: 1px solid ${(props) => props.theme.buttonClicked};
+      @media (min-width: 1500px) {
+        font-size: 1.3em;
+      }
       &:hover {
             transform: scale(1.1);
             transition: all 0.6s ease-in-out;
             border: none;
           }
        }
+      
     }
   .textarea {
     height: 80px;
     border-radius: 10px;
     -webkit-hyphens: auto;
     hyphens: auto;
+    
   }
   .buttonPosition {
     display: flex;
@@ -144,8 +157,16 @@ const ContactFormTestTemplate = styled.div`
     justify-content: center;
   }
 `;
-const Champs= styled.div``;
-const Name= styled.div``;
+const Champs= styled.div`
+  @media (min-width: 1500px) {
+    width: 100%;
+  }`;
+const Name= styled.div`
+  transition: all 0.6s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+  }`;
 const Desc= styled.div``;
 const Email= styled.div``;
 const ButtonTemplate= styled.button`
@@ -157,18 +178,16 @@ const ButtonTemplate= styled.button`
     border: 1px solid ${(props) => props.theme.mainColor};
     font-family: ${(props) => props.theme.fontTheme};
     color: ${(props) => props.theme.mainColor};
-    transition: all 0.6s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-        transition: all 0.6s ease-in-out;
-        border: 1px solid ${(props) => props.theme.mainColor};
-      }
+
 `;
 const TitreForm=styled.h2`
   font-size: 40px;
   text-align: center;
   text-decoration: underline 3px solid ${(props) => props.theme.backSession};
   font-family: ${(props) => props.theme.titleFont};
+  @media (min-width: 1500px) {
+    font-size: 80px;
+  }
 `;
 
 

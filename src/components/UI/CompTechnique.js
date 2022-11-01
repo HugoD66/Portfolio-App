@@ -28,7 +28,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="CSS/SCSS"
                 picture={css}
-
                 visualParts={[
                     {
                         percentage: "70%",
@@ -39,7 +38,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="PHP"
                 picture={php}
-
                 visualParts={[
                     {
                         percentage: "70%",
@@ -50,7 +48,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="JavaScript"
                 picture={js}
-
                 visualParts={[
                     {
                         percentage: "60%",
@@ -61,7 +58,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="MySQL"
                 picture={sql}
-
                 visualParts={[
                     {
                         percentage: "75%",
@@ -72,7 +68,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="Adobe XD"
                 picture={adobe}
-
                 visualParts={[
                     {
                         percentage: "55%",
@@ -83,7 +78,6 @@ function CompTechnique(props) {
             <ProgressLine
                 label="API Rest"
                 picture={api}
-
                 visualParts={[
                     {
                         percentage: "50%",
@@ -94,12 +88,14 @@ function CompTechnique(props) {
 
         </Progress>
         <Complements>
-            <h5>IDE:</h5>
-            <p> PhpStorm </p>
+            <div className="title1">
+                <h5>IDE:</h5>
+                <p> PhpStorm </p>
+            </div>
+            <div className="title2">
                 <h5>Système d'exploitation:</h5>
-            <p>Windows</p>
-
-
+                <p>Windows</p>
+            </div>
         </Complements>
         </>
     );
@@ -110,19 +106,28 @@ const Progress = styled.div`
 `;
 const Complements = styled.div`
   width: 100%;
-
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   h5 {
     color: ${(props) => props.theme.fontCompGenerale};
     font-family: Consolas,SansSerif,serif;
     font-size: 1.4em;
     margin: 2% auto;
     text-decoration: underline 2px solid ${(props) => props.theme.backSession};
-
+    @media (min-width: 1500px) {
+      margin: auto 2%;
+      font-size: 2em;
+    }
+  }
+  p {
+    @media (min-width: 1500px) {
+      font-size: 1.3em;
+      margin: 1%;
+    }
   }
 `;
 export default CompTechnique;

@@ -76,6 +76,9 @@ const OverlayContent = styled.div`
     font-size: 1.2em;
     line-height: 1.2em;
     font-family: ${(props) => props.theme.fontTheme};
+  @media(min-width: 1500px) {
+    font-size: 1.5em;
+  }
 `;
 // Header
 const Wrapper = styled.header`
@@ -102,6 +105,7 @@ const Wrapper = styled.header`
 `;
 const OverlayTemplate=styled.div`
   z-index: 2;
+ 
 `;
 //Navbar
 const MenuEL=styled.p`
@@ -123,6 +127,10 @@ const MenuEL=styled.p`
   @media (min-width: 1100px) {
     width: 150px;
     font-size: 1.5em;
+  }
+  @media (min-width: 1500px) {
+    width: 170px;
+    font-size: 1.7em;
   }
 `;
 const Nav = styled.nav`

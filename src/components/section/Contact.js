@@ -5,7 +5,7 @@ import enveloppe from "picture/envelope.svg";
 import React, {useState} from 'react';
 import Pdf from 'picture/CV.png';
 import Modal from 'react-bootstrap/Modal';
-import ContactForm from "../UI/ContactFormTest";
+import ContactForm from "../UI/ContactForm";
 
 
 
@@ -55,7 +55,16 @@ export default function Contact() {
     );
 }
 const ContactTemplate = styled.div`
-  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 5% auto;
+  @media (min-width: 1500px) {
+    width: 70%;
+    flex-direction: row;
+  }
 `;
 const Description= styled.div`
   display: flex;
@@ -70,6 +79,14 @@ const Description= styled.div`
   p {
     width: 75%;
     line-height: 1.5em;
+    text-align: center;
+    @media (min-width: 1500px) {
+      font-size: 1.3em;
+    }
+  }
+  @media (min-width: 1500px) {
+    width: 50%;
+    
   }
   .icones {
     display: flex;
@@ -92,7 +109,10 @@ const Description= styled.div`
         transform: scale(1.2);
         transition: all 0.5s ease-in-out;
         background-color: ${(props) => props.theme.backSession};
-        
+      }
+      @media (min-width: 1500px) {
+        width: 10em;
+        height: 10em;
       }
     }
   }

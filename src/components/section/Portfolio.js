@@ -28,6 +28,11 @@ const PortFolioTemplate = styled.div`
   color: ${(props) => props.theme.fontCompGenerale};
     p {
       width: 75%;
+      margin: auto;
       line-height: 1.5em;
+      font-size: 1.3em;
+      text-align: center;
+      margin-bottom: 5%;
     }
+  
 `;
