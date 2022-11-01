@@ -18,15 +18,15 @@ export default function Cursus() {
                     </Accordion.Header>
                     <Accordion.Body>
                         <p>
-                            J'ai été amené dans ce milieux en tant que plongeur, le temps d'une saison.
-                        Après une bonne entente et une bonne dynamique, l'équipe de cuisine m'a gardé dans ses rangs afin d'affiner mes
-                        compétences de cuisine, qui étaient jusque la nulles! J'ai, grâce à mon ancien patron, également appris l'art
-                        de la pizza en intégrant en parrallèle l'équipe de cuisinier dans sa pizzeria.
+                            J'ai travaillé comme plongeur durant une saison.
+                        Après une bonne entente et une dynamique positive, l'équipe m'a gardé dans ses rangs afin d'affiner mes
+                        compétences en cuisine. <br/> J'ai également appris l'art
+                        de la pizza en intégrant, en parallèle, l'équipe de cuisiniers dans sa pizzeria.
                         </p>
                         <ul>
-                            <li> •Cuisinier/Pâtissier, Le Jardin, Toreilles</li>
-                            <li> •Pizzaïolo, Pizza Romane, Toreilles</li>
-                            <li> •Plongeur, Le Jardin, Toreilles</li>
+                            <li> •Cuisinier/Pâtissier, Le Jardin, Torreilles</li>
+                            <li> •Pizzaïolo, Pizza Romane, Torreilles</li>
+                            <li> •Plongeur, Le Jardin, Torreilles</li>
                         </ul>
                     </Accordion.Body>
                 </Accordion.Item>
@@ -39,8 +39,8 @@ export default function Cursus() {
                     </Accordion.Header>
                     <Accordion.Body>
                         <p>
-                            Au début de ma vie professionnel, j'ai tout d'abbord été dirigé dans le milieux du bâtiment. Avec un BAC STI
-                            Génie-Civil en poche, je suis parti à Montpellier pour rejoindre l'équipe de Fondeville. Après être revenu à
+                            Au début de ma vie professionnelle, j'ai travaillé dans le bâtiment. Avec un BAC Sciences Techniques de l'Ingénieur
+                            Génie-Civil en poche, je suis parti à Montpellier pour rejoindre l'équipe de l'entreprise Fondeville. De retour à
                             Perpignan, j'ai été recruté par diverses entreprise d'artisanat :
                         </p>
                         <ul>
@@ -61,13 +61,13 @@ export default function Cursus() {
                     </Accordion.Header>
                     <Accordion.Body>
                         <p>
-                            Tout au long de ma vie active, j'ai obtenu des contrats d' intermittence, j'ai donc eut la chance de découvrir le monde
-                            de la culture, et de participer à la construction d'une scene de théatre. J'ai également été plongé dans le milieu festivalier
+                            Tout au long de ma vie active, j'ai travaillé comme intermittent, j'ai donc eu la chance de découvrir le monde
+                            de la culture, et de participer à la création de divers spectacles. J'ai également été plongé dans le milieu festivalier
                             grâce à VISA pour l'image !
                             <ul>
-                                <li> •Technicien plateau, Théatre de l'étang, St estève</li>
-                                <li> •Technicien plateau, Théatre municipal, Perpignan</li>
-                                <li> •Régiste, VISA pour l'image, Perpignan</li>
+                                <li> •Technicien plateau, Théâtre de l'étang, St Estève</li>
+                                <li> •Technicien plateau, Théâtre municipal, Perpignan</li>
+                                <li> •Régisseur, VISA pour l'image, Perpignan</li>
                             </ul>
                         </p>
                     </Accordion.Body>
@@ -80,10 +80,10 @@ export default function Cursus() {
                         </TitleAccord>
                     </Accordion.Header>
                     <Accordion.Body>
-                        <p>J'ai, pour finir, exercé dans différents domaines:</p>
+                        <p>J'ai, pour finir, travaillé dans différents domaines:</p>
                         <ul>
-                            <li> •Vendanges, Mas Baux, Canet en Rousillon</li>
-                            <li> •Infirmier, 4 stages dans milieux différents</li>
+                            <li> •Vendanges, Mas Baux, Canet en Roussillon</li>
+                            <li> •Infirmier, 4 stages dans divers milieux</li>
                             <li> •Prospection prix du marché, St Charles, Perpignan</li>
                         </ul>
                     </Accordion.Body>

@@ -7,9 +7,9 @@ function CompGeneral(props) {
         <div>
             <Description>
                     Durant mon cursus, j'ai été amené à utiliser
-                        différents languages, autant back que front.
-                        J'ai également dût ?????  manipuler de nombreux
-                        frameworks. Spécialisé en développement
+                        différents langages, aussi bien back que front.
+                        J'ai également manipulé de nombreux
+                        frameworks. <br/>Je me suis spécialisé en développement
                         d'application Symfony, et en Programmation
                         Orientée Objet.
 

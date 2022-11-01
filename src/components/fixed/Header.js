@@ -59,8 +59,8 @@ export default function Header (){
                             <ul>
                                 <li>Adresse : 21 Rue Nicolas Poussin</li>
                                 <li>Formation : Developpeur Web</li>
-                                <li>Nationalité : Francais</li>
-                                <li>Ville : Perpignan</li>
+                                <li>Nationalité : Francaise</li>
+                                <li>Ville : 66000 Perpignan</li>
                                 <li>Age :30 ans</li>
                             </ul>
                         </OverlayContent>

@@ -8,8 +8,7 @@ export default function PortFolio({props}) {
     return (
         <PortFolioTemplate>
             <p>
-                Durant mon année d'étude, j'ai eut l'occasion
-                de réaliser divers projets. Voici certains d'entre eux
+                Durant ma formation, j'ai réalisé divers projets. Voici certains d'entre eux
                 qui ont été mis en ligne :
             </p>
             < LienApps />

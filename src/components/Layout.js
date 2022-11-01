@@ -36,7 +36,7 @@ const Wrapper =styled.div`
 
 `;
 const Main = styled.div`
-  min-height: calc(100vh);
+  min-height: calc(98vh);
 
 `;
 

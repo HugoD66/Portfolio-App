@@ -72,7 +72,6 @@ table {
 .modal-content-wrapper {
   position: fixed;
   width: 95%;
-  height: min-content;
   background: white;
   margin: auto;
   top: 0;

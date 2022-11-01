@@ -202,7 +202,7 @@ export default function LienApps () {
                     <ModalScreenAndDescript>
                         <img src={EcoitScreen} alt="Logo Clipboard Modal"/>
                         <p>
-                            Plateforme éducative sur l'impact digital sur l'écologie.
+                            Plateforme éducative de l'impact digital sur l'écologie.
                         </p>
                     </ModalScreenAndDescript>
                     <ModalButtons type="button" onClick={accesAppEcoit}>
@@ -290,8 +290,11 @@ const BouttonAppli = styled.div`
 `;
 const ModalCustom = styled.div`
   .modal-content-wrapper {
-    @media (min-width: 1500px) {
+    height: min-content;
+
+    @media (min-width: 650px) {
       width: 50%;
+      height: min-content;
     }
   }
 `;
