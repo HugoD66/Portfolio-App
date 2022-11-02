@@ -103,6 +103,7 @@ const ExplainContent= styled.div`
     text-align: center;
     margin: auto;
     right: 55%;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     @media (min-width: 550px) {
       font-size: 35px;
@@ -152,6 +153,8 @@ const AccueilTemplate = styled.div`
   @media (min-width: 1450px) {
     height: 1300px;
   }
+  
+  
   h1 {
     right: 15%;
     font-size: 45px;

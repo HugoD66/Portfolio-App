@@ -4,6 +4,7 @@ import HD from "../../picture/logo-HD.png"
 import React, { useState, useRef } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Pdf from "../../picture/CV.png";
+import PdfDl from "../../picture/CV.pdf";
 
 export default function Header (){
     const location = useLocation();
@@ -88,7 +89,7 @@ export default function Header (){
                     </Modal.Body>
                     <Modal.Footer   className="border-0">
                         <Btn variant="secondary" onClick={handleClosePdf}>Fermer</Btn>
-                        <Btn variant="primary" ><a href={Pdf} download>Telecharger </a></Btn>
+                        <Btn variant="primary" ><a href={PdfDl} download>Telecharger </a></Btn>
                     </Modal.Footer>
                 </Modal.Dialog>
             </Modal>

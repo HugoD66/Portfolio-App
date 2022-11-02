@@ -3,9 +3,10 @@ import curiculum from "picture/curiculum.svg";
 import phone from "picture/phone.svg";
 import enveloppe from "picture/envelope.svg";
 import React, {useState} from 'react';
-import Pdf from 'picture/CV.png';
 import Modal from 'react-bootstrap/Modal';
 import ContactForm from "../UI/ContactForm";
+import Pdf from "../../picture/CV.png";
+import PdfDl from "../../picture/CV.pdf";
 
 export default function Contact() {
 
@@ -28,9 +29,18 @@ export default function Contact() {
                     à disposition.
                 </p>
                 <div className="icones">
-                    <img src={phone} alt="Tel"  onClick={() => imageClick()}/>
-                    <img email="dessauw.hugo@gmail.com" src={enveloppe} alt="Enveloppe" onClick={(e) => imageMail}/>
-                    <img src={curiculum} alt="CV" onClick={handleShowPdf} />
+                    <img src={phone}
+                         alt="Tel"
+                         onClick={() => imageClick()}
+                    />
+                    <img ref="mailto:dessauw.hugo@gmail.com"
+                         src={enveloppe} alt="Enveloppe"
+                         onClick={(e) => imageMail}
+                    />
+                    <img src={curiculum}
+                         alt="CV"
+                         onClick={handleShowPdf}
+                    />
                 </div>
             </Description>
             <ContactForm />
@@ -44,7 +54,7 @@ export default function Contact() {
                     </Modal.Body>
                     <Modal.Footer   className="border-0">
                         <Btn variant="secondary" onClick={handleClosePdf}>Fermer</Btn>
-                        <Btn variant="primary" ><a href={Pdf} download>Telecharger </a></Btn>
+                        <Btn variant="primary" ><a href={PdfDl} download>Telecharger </a></Btn>
                     </Modal.Footer>
                 </Modal.Dialog>
             </Modal>
