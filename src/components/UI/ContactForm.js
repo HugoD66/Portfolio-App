@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form";
 
 export default function ContactForm ()  {
 
-
     const { handleSubmit, formState } = useForm();
     const { isSubmitting } = formState;
     function onSubmit(data) {
@@ -18,8 +17,6 @@ export default function ContactForm ()  {
             }, 2000);
         });
     }
-
-
     const [toSend, setToSend] = useState({
         from_name: '',
         to_name: 'dessauw.hugo66@gmail.com',
@@ -42,12 +39,9 @@ export default function ContactForm ()  {
                 console.log('FAILED...', err);
             });
     };
-
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
-
-
 
     return (
         <ContactFormTemplate>
@@ -91,7 +85,6 @@ export default function ContactForm ()  {
                             <ButtonTemplate id="labelButton" disabled={isSubmitting} type='submit'>
                                 {isSubmitting &&
                                     <span className="spinner-border spinner-border-sm mr-1">
-
                                     </span>
                                 }
                                     Envoyer
@@ -142,14 +135,12 @@ const ContactFormTemplate = styled.div`
             border: none;
           }
        }
-      
     }
   .textarea {
     height: 80px;
     border-radius: 10px;
     -webkit-hyphens: auto;
     hyphens: auto;
-    
   }
   .buttonPosition {
     display: flex;
@@ -178,7 +169,6 @@ const ButtonTemplate= styled.button`
     border: 1px solid ${(props) => props.theme.mainColor};
     font-family: ${(props) => props.theme.fontTheme};
     color: ${(props) => props.theme.mainColor};
-
 `;
 const TitreForm=styled.h2`
   font-size: 40px;

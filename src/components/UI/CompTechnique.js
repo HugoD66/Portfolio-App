@@ -9,7 +9,6 @@ import sql from "picture/competences/sql.png"
 import adobe  from "picture/competences/adobe.png"
 import api from "picture/competences/api.png"
 
-
 function CompTechnique(props) {
 
     return (
@@ -85,7 +84,6 @@ function CompTechnique(props) {
                     }
                 ]}
             />
-
         </Progress>
         <Complements>
             <div className="title1">

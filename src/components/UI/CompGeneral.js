@@ -12,7 +12,6 @@ function CompGeneral(props) {
                         frameworks. <br/>Je me suis spécialisé en développement
                         d'application Symfony, et en Programmation
                         Orientée Objet.
-
             </Description>
             <Languages className="compAngFr">
                 <Rounded className="dashboard">
@@ -33,13 +32,11 @@ function CompGeneral(props) {
             <SavoirEtre className="compSavoir">
                 <h4>Savoir-être:</h4>
                 <p>Autonome, respectueux, organisé.</p>
-
             </SavoirEtre>
         </div>
     );
 }
 const Description= styled.p`
-
     width: 75%;
     line-height: 1.5em;
     color: ${(props) => props.theme.fontCompGenerale};
@@ -122,7 +119,7 @@ const Rounded = styled.div`
     transform-origin: 50% 50%;
   }
   .meter-1 {
-    stroke-dasharray: 390;
+    stroke-dasharray: 405;
     stroke-dashoffset: 100;
     stroke: ${(props) => props.theme.buttonClicked};
   ;
@@ -152,6 +149,5 @@ const Rounded = styled.div`
         stroke-dashoffset: 100;
       }
     }
-
 `;
 export default CompGeneral;

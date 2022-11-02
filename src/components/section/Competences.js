@@ -1,11 +1,8 @@
 import styled from "styled-components";
-
-
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CompGeneral from "../UI/CompGeneral";
 import CompTechnique from "../UI/CompTechnique";
-
 
 export default function Competences() {
     const style = {
@@ -41,12 +38,10 @@ export default function Competences() {
 const CompetencesTemplate = styled.div`
   width: 100%;
   margin: auto;
-  
   @media (min-width: 1500px) {
     width: 84%;
     margin: 4% auto;
   }
-
 `;
 
 

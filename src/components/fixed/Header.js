@@ -2,12 +2,17 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import HD from "../../picture/logo-HD.png"
 import React, { useState, useRef } from 'react';
-import {Overlay} from "react-bootstrap";
+import Modal from 'react-bootstrap/Modal';
+import Pdf from "../../picture/CV.png";
 
 export default function Header (){
     const location = useLocation();
-    const [show, setShow] = useState(false);
     const target = useRef(null);
+
+    const [showModalPdf, setShowModalPdf] = useState(false);
+    const handleClosePdf = () => setShowModalPdf(false);
+    const handleShowPdf = () => setShowModalPdf(true);
+
     return (
         <Wrapper>
             <Nav>
@@ -38,8 +43,12 @@ export default function Header (){
                 </Link>
             </Nav>
             <RightNav >
-                <img src={HD} alt="Icone Hugo DESSAUW" ref={target} onClick={() => setShow(!show)}/>
+                <img src={HD} alt="Icone Hugo DESSAUW" ref={target} onClick={handleShowPdf}/>
             </RightNav>
+{/* OVERLAY
+            import {Overlay} from "react-bootstrap";
+
+            const [show, setShow] = useState(false);
 
             <Overlay target={target.current} show={show} placement="bottom">
                 {({ placement, arrowProps, show: _show, popper, ...props }) => (
@@ -68,6 +77,21 @@ export default function Header (){
                     </OverlayTemplate>
                 )}
             </Overlay>
+*/}
+            <Modal className="modal" show={showModalPdf} onHide={handleClosePdf}>
+                <Modal.Dialog >
+                    <Modal.Header closeButton   className="border-0">
+                        <Modal.Title>Mon CV</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Im src= {Pdf} alt="CV Hugo DESSAUW"/>
+                    </Modal.Body>
+                    <Modal.Footer   className="border-0">
+                        <Btn variant="secondary" onClick={handleClosePdf}>Fermer</Btn>
+                        <Btn variant="primary" ><a href={Pdf} download>Telecharger </a></Btn>
+                    </Modal.Footer>
+                </Modal.Dialog>
+            </Modal>
         </Wrapper>
     )
 }
@@ -105,7 +129,6 @@ const Wrapper = styled.header`
 `;
 const OverlayTemplate=styled.div`
   z-index: 2;
- 
 `;
 //Navbar
 const MenuEL=styled.p`
@@ -144,16 +167,52 @@ const Nav = styled.nav`
 // Nom/Icone
 const RightNav=styled.div`
     margin-right: 4%;
-
   img {
     max-width: 7em;
     max-height: 7em;
     transition: all 0.3s ease-in-out;
-
   }
   &:hover {
     transition: all 0.3s ease-in-out;
     transform: scale(1.15);
-
+  }
+`;
+const Im = styled.img`
+  max-height: 100%;
+  max-width: 80%;
+`;
+const Btn = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-decoration: none;
+  font-family:  ${(props) => props.theme.fontTheme};
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 8px;
+  margin-right: 2%;
+  transition: all 0.6s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.6s ease-in-out;
+  }
+  a {
+    text-decoration: none;
+    color:  inherit;
   }
 `;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {motion, AnimatePresence} from "framer-motion";
 import {forwardRef, useImperativeHandle, useRef, useState} from "react";
-import button from "bootstrap/js/src/button";
 //Hynos
 import HypnosScreen from "picture/carousel/hypnos.png";
 import HypnosLogo from "picture/modal/Portfolio/Logo/logo-hypnos-withoutBack.png"
@@ -134,7 +133,6 @@ export default function LienApps () {
                     <img src={DanatabseLogo} alt="Bouton Dantabse"/>
                     <div className="title2">
                         <p>Dantabase</p>
-
                     </div>
                 </BouttonAppli>
 {/* Modal Ecoit */}
@@ -156,7 +154,6 @@ export default function LienApps () {
                     <img src={ClipLogo} alt="Bouton Clipboard"/>
                     <div className="title5">
                         <p>Clipboard</p>
-
                     </div>
                 </BouttonAppli>
         </ListeAppli>

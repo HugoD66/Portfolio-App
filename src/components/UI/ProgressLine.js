@@ -23,7 +23,6 @@ const ProgressLine = ({
             return 0;
         })
     );
-
     useEffect(() => {
         // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
         // You need to wrap it to trigger the animation

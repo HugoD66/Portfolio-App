@@ -7,9 +7,6 @@ import Pdf from 'picture/CV.png';
 import Modal from 'react-bootstrap/Modal';
 import ContactForm from "../UI/ContactForm";
 
-
-
-
 export default function Contact() {
 
     const imageClick = (e) => {
@@ -86,7 +83,6 @@ const Description= styled.div`
   }
   @media (min-width: 1500px) {
     width: 50%;
-    
   }
   .icones {
     display: flex;
@@ -147,7 +143,6 @@ const Btn = styled.button`
   padding: 6px 8px;
   margin-right: 2%;
   transition: all 0.6s ease-in-out;
-
   &:hover {
     transform: scale(1.2);
     transition: all 0.6s ease-in-out;
@@ -156,5 +151,4 @@ const Btn = styled.button`
     text-decoration: none;
     color:  inherit;
   }
-
 `;

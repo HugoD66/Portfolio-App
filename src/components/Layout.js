@@ -2,13 +2,9 @@ import GlobalStyle from "../style/GlobalStyle";
 import styled, { ThemeProvider} from "styled-components";
 import coloredTheme from '../style/themes/colored.json';
 import darkTheme from '../style/themes/dark.json';
-
 import React, {useState} from "react";
 import Header from "./fixed/Header";
 import Footer from "./fixed/Footer";
-
-
-
 
 function Layout({ children }) {
     const [isColored, setIsColored] = useState(true);
@@ -30,14 +26,9 @@ function Layout({ children }) {
         </ThemeProvider>
     );
 }
-
-
 const Wrapper =styled.div`
-
 `;
 const Main = styled.div`
   min-height: calc(98vh);
-
 `;
-
 export default Layout;

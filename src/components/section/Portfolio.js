@@ -2,8 +2,6 @@ import styled from "styled-components";
 import React from "react";
 import LienApps from "../UI/LienApps";
 
-
-
 export default function PortFolio({props}) {
     return (
         <PortFolioTemplate>
@@ -33,5 +31,4 @@ const PortFolioTemplate = styled.div`
       text-align: center;
       margin-bottom: 5%;
     }
-  
 `;

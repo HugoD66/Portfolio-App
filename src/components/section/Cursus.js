@@ -11,7 +11,7 @@ export default function Cursus() {
             <Accordion defaultActiveKey="0" flush>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>
-                        <img src={RestauPic} alt="Accordeon picture 1"/>
+                        <img src={RestauPic} alt="Accordeon  1"/>
                         <TitleAccord>
                             Restauration
                         </TitleAccord>
@@ -32,7 +32,7 @@ export default function Cursus() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>
-                        <img src={ArtisanatPic} alt="Accordeon picture 2"/>
+                        <img src={ArtisanatPic} alt="Accordeon  2"/>
                         <TitleAccord>
                             Artisanat
                         </TitleAccord>
@@ -54,7 +54,7 @@ export default function Cursus() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
                     <Accordion.Header>
-                        <img src={TheatrePic} alt="Accordeon picture 3"/>
+                        <img src={TheatrePic} alt="Accordeon  3"/>
                         <TitleAccord>
                             Technique
                         </TitleAccord>
@@ -74,7 +74,7 @@ export default function Cursus() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
                     <Accordion.Header>
-                        <img src={AccordPic} alt="Accordeon picture 4"/>
+                        <img src={AccordPic} alt="Accordeon  4"/>
                         <TitleAccord>
                             Divers
                         </TitleAccord>
@@ -91,8 +91,6 @@ export default function Cursus() {
             </Accordion>
         </CursusTemplate>
     );
-
-
 }
 const CursusTemplate = styled.div`
   width: 90%;
@@ -108,7 +106,6 @@ const CursusTemplate = styled.div`
       font-size: 1.5em;
     }
   }
-
   .accordion-button:focus {
     box-shadow: none;
     background-color: ${(props) => props.theme.buttonClicked};
@@ -118,13 +115,10 @@ const CursusTemplate = styled.div`
       transform: scale(1.1);
       transition: all 0.3s ease-in-out;
     }
-
   }
-
   .accordion-button:not(.collapsed) {
     color: #212529;
   }
-
   p {
     width: 90%;
     text-align: justify;
@@ -135,14 +129,12 @@ const CursusTemplate = styled.div`
       font-size: 1.3em;
     }
   }
-
   img {
     width: 2em;
     @media (min-width: 1500px) {
       width: 3em;
     }
   }
-
   ul {
     background-color: rgba(235, 235, 231, 0.8);
     width: 80%;
@@ -167,5 +159,4 @@ const TitleAccord = styled.div`
   text-shadow: 0 0 2px #e5f2f1;
   margin-left: 2em;
   font-family: ${(props) => props.theme.titleFont};
-
 `;
