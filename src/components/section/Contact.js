@@ -16,6 +16,7 @@ export default function Contact() {
     const imageMail = (e) => {
         window.location.href  = "mailto:dessauw.hugo@gmail.com"
     }
+
     const [showModalPdf, setShowModalPdf] = useState(false);
     const handleClosePdf = () => setShowModalPdf(false);
     const handleShowPdf = () => setShowModalPdf(true);
@@ -33,8 +34,7 @@ export default function Contact() {
                          alt="Tel"
                          onClick={() => imageClick()}
                     />
-                    <img ref="mailto:dessauw.hugo@gmail.com"
-                         src={enveloppe} alt="Enveloppe"
+                    <img src={enveloppe} alt="Enveloppe"
                          onClick={(e) => imageMail}
                     />
                     <img src={curiculum}
