@@ -5,6 +5,8 @@ import enveloppe from "picture/envelope.svg";
 import React, {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
 import ContactForm from "../UI/ContactForm";
+import ContactForm2 from "../UI/ContactForm2";
+import ContactForm3 from "../UI/ContactForm3";
 import Pdf from "../../picture/CV.png";
 import PdfDl from "../../picture/CV.pdf";
 
@@ -14,7 +16,8 @@ export default function Contact() {
         window.location = "tel:0662560152"
     }
     const imageMail = (e) => {
-        window.location.href  = "mailto:dessauw.hugo@gmail.com"
+        window.location  = "mailto:dessauw.hugo@gmail.com"
+        return false;
     }
 
     const [showModalPdf, setShowModalPdf] = useState(false);
@@ -35,7 +38,7 @@ export default function Contact() {
                          onClick={() => imageClick()}
                     />
                     <img src={enveloppe} alt="Enveloppe"
-                         onClick={(e) => imageMail}
+                         onClick={(e) => imageMail()}
                     />
                     <img src={curiculum}
                          alt="CV"
@@ -43,7 +46,7 @@ export default function Contact() {
                     />
                 </div>
             </Description>
-            <ContactForm />
+            <ContactForm3 />
             <Modal className="modal" show={showModalPdf} onHide={handleClosePdf}>
                 <Modal.Dialog >
                     <Modal.Header closeButton   className="border-0">

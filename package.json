@@ -1,5 +1,6 @@
 {
   "name": "cv-react",
+  "description": "Déploiement première Application React, avec comme thème mon premier portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "file-saver": "^2.0.5",
     "framer-motion": "^7.6.2",
     "gsap": "^3.11.3",
+    "qrcode": "^1.5.1",
     "react": "^18.2.0",
     "react-animated-progress-bar": "^1.1.1",
     "react-bootstrap": "^2.5.0",

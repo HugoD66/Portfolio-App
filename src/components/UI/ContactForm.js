@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 import {send} from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
 
@@ -27,7 +28,7 @@ export default function ContactForm ()  {
         e.preventDefault();
         send(
             'mmferrzpjyssxotv',
-            'TEMPLATE ID',
+            'template_7szl2jt',
             toSend,
             'E7zb7VnzX3j0W5vgC'
         )
