@@ -7,7 +7,7 @@ export default function PortFolio({props}) {
         <PortFolioTemplate>
             <p>
                 Durant ma formation, j'ai réalisé divers projets. Voici certains d'entre eux
-                qui ont été mis en ligne :
+                qui ont été mis en ligne test :
             </p>
             < LienApps />
         </PortFolioTemplate>
